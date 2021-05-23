@@ -26,13 +26,6 @@ namespace Sample.Application.Commands.SignIn
 
         public Task<ServiceResponse<SignInUserCommandResult>> Handle(SignInSmsCodeCommand request, CancellationToken cancellationToken)
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]));
-            var credential = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expiry = DateTime.Now.AddMinutes(int.Parse(_configuration["JwtExpiryInMinute"]));
-           
-            
-           // User user = _userRepository.Table.Where(x => x.MobilePhoneNumber.Equals(request.MobilePhoneNumber)).Include()
-            
             throw new System.NotImplementedException();
         }
     }
